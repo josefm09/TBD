@@ -70,7 +70,51 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">Rentar una pelicula</div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sel1">Seleccione pelicula:</label>
+                            <select class="form-control" id="slcPelicula" placeholder="Nombre de la pelicula">
+                        
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sel1">Seleccione cliente:</label>
+                            <select class="form-control" id="slcCliente" placeholder="Nombre del cliente">
+            
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Seleccione fecha de entrega:</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" id="fechaEntrega" placeholder="Fecha limite"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="sel1">Atendido por:</label>
+                        <select class="form-control" id="slcEmpleado" placeholder="Nombre del empleado" >
+        
+                        </select>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-block" id="btnTerminar">Terminar</a>
+              </form>
+            </div>
+          </div>
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
@@ -114,8 +158,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src="js/venta.js"></script>
   </div>
 </body>
 
