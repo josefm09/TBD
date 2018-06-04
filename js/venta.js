@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     $('#btnTerminar').on('click', function(){
-        var fechaEntrega = $('#datetimepicker1').val();
+        var fechaEntrega = $('#entrega').val();
         var inventario = $('#slcPelicula').val();
         var empleado = $('#slcEmpleado').val();
         var cliente = $('#slcCliente').val();
