@@ -70,8 +70,30 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-
+      <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> Clientes</div>
+          <div class="card-body">
+            <div class="form-group">
+              <button class="btn btn-success" id="btnNuevo">Nuevo cliente</button>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+      </div>
     </div>
+  </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -102,6 +124,47 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Agregar cliente</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                    <label for="sel1">Seleccione tienda:</label>
+                    <select class="form-control" id="slcTienda" placeholder="Nombre de la pelicula">
+                
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Nombre</label>
+                    <input class="form-control" id="txtNombre" placeholder="Nombre del cliente"/>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Apellido</label>
+                    <input placeholder="Apellido del cliente" class="form-control" id="txtApellido">
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="sel1">Email</label>
+                        <input id="txtEmail" class="form-control" placeholder="Correo electronico">
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-success" id="agregar">Agregar</a>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -114,8 +177,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src="js/clientes.js"></script>
   </div>
 </body>
 

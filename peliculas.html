@@ -70,7 +70,28 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Peliculas</div>
+        <div class="card-body">
+          <div class="form-group">
+            <button class="btn btn-success" id="btnNuevo">Nueva pelicula</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Titulo</th>
+                  <th>Dias de renta</th>
+                  <th>Año</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
@@ -102,6 +123,57 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Agregar pelicula</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                    <label for="sel1">Seleccione lenguaje:</label>
+                    <select class="form-control" id="slcLenguaje" placeholder="Nombre de la pelicula">
+                
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Titulo</label>
+                    <input class="form-control" id="txtTitulo" placeholder="Nombre de la pelicula"/>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Descripcion</label>
+                    <input placeholder="Descripcion de la pelicula" class="form-control" id="txtDescripcion">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Año de lanzamiento</label>
+                    <input id="txtAnio" class="form-control" placeholder="Año de nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Duracion de renta</label>
+                    <input id="txtDias" class="form-control" placeholder="Dias de renta">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Duración de la pelicula</label>
+                    <input id="txtDuracion" class="form-control" placeholder="Minutos de duración">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Costo de remplazo</label>
+                    <input id="txtCosto" class="form-control" placeholder="Costo por remplazar">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-success" id="agregar">Agregar</a>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -114,8 +186,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src="js/peliculas.js"></script>
   </div>
 </body>
 
